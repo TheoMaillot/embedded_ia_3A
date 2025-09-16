@@ -1,1 +1,1 @@
-dzefdfaz
+print("RRRR")
