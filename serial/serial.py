@@ -81,8 +81,8 @@ def evaluate_model_on_STM32(iterations, serial_port):
 
 
 if __name__ == '__main__':
-    X_test = np.load("./MNIST_xtest_NN_C2_16_10.npy")
-    Y_test = np.load("./MNIST_ytest_NN_C2_16_10.npy")
+    X_test = np.load("C:/Users/theo/Downloads/CIFAR10_xtest.npy")
+    Y_test = np.load("C:/Users/theo/Downloads/CIFAR10_ytest.npy")
 
     with serial.Serial(PORT, 115200, timeout=1) as ser:
         print("Synchronising...")
