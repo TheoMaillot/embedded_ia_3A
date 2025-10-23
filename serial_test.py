@@ -1,7 +1,8 @@
 import serial
 import numpy as np
+import time
 
-PORT = "/dev/tty.usbmodem1422303" 
+PORT = "COM12" 
 
 
 def synchronise_UART(serial_port):
@@ -51,8 +52,8 @@ def read_output_from_STM32(serial_port):
     A list of float values obtained by dividing each byte by 255.
     """
     output = serial_port.read(10)
-
-    float_values = [int(out)/255 for out in output]
+    
+    float_values = [int(out)/255.0 for out in output]
     return float_values
 
 
@@ -71,6 +72,7 @@ def evaluate_model_on_STM32(iterations, serial_port):
     for i in range(iterations):
         print(f"----- Iteration {i+1} -----")
         send_inputs_to_STM32(X_test[i], serial_port)
+        time.sleep(5)
         output = read_output_from_STM32(serial_port)
         if (np.argmax(output) == np.argmax(Y_test[i])):
             accuracy += 1 / iterations
@@ -81,6 +83,7 @@ def evaluate_model_on_STM32(iterations, serial_port):
 
 
 if __name__ == '__main__':
+    # Rentrer vos propres chemins d'accès aux fichiers .npy
     X_test = np.load("C:/Users/theo/Downloads/CIFAR10_xtest.npy")
     Y_test = np.load("C:/Users/theo/Downloads/CIFAR10_ytest.npy")
 
