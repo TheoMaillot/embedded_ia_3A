@@ -9,17 +9,30 @@ Nous avons testé ce modèle avant de commencer à le modifier, et nous atteigni
 
 ## 2. Étude du microcontrôleur cible
 
-Pour ce projet nous avions à notre disposition la carte STM32L4R9 Discovery Kit. Les principales à prendre en compte lors du choix de la carte sont la mémoire Flash, sur laquelle sera stocké le modèle, et la mémoire RAM qui effectuera les calculs du modèle.
+Pour ce projet nous avions à notre disposition la carte STM32L4R9 Discovery Kit. Les principales caractéristiques à prendre en compte lors du choix de la carte sont la mémoire Flash, sur laquelle sera stocké le modèle, et la mémoire RAM qui effectuera les calculs du modèle.
 
-Dans notre cas, la datasheet nous fournit les caractéristiques suivantes : une mémoire Flash de 2 Mo et une RAM de 640 Ko. La mémoire RAM devrait être suffisante, même si l'on risque d'observer plusieurs secondes d'inférence par image. Par contre, la Flash est insuffisante au vu de la taille actuelle de notre modèle (16 Mo). Nous avons pu vérifier ceci en analysant le modèle sur Cube Ide.
-
+Dans notre cas, la datasheet nous fournit les caractéristiques suivantes : une mémoire Flash de 2 Mo et une RAM de 640 Ko. La mémoire RAM devrait être suffisante, même si l'on risque d'observer plusieurs secondes d'inférence par image. Par contre, la Flash est insuffisante au vu de la taille actuelle de notre modèle (16 Mo). 
 ---
 
 ## 3. Évaluation de l’embarquabilité du modèle initial
 
+Pour vérifier l'embarquabilité de notre modèle, nous avons créé un projet CubeIde pour notre carte, et analyser notre modèle avec STM32CubeAI. Voici les résultats obtenus :
+
+![Analyse modèle de base](./img/first_analyse.png)
+
+Comme prévu, la Flash est insuffisante pour contenir notre modèle.
+
 ---
 
 ## 4. Conception d’un nouveau modèle (si nécessaire)
+
+Une première solution pour rendre le modèle embarquable, est de le compresser. Ceci est directement possible avec STM32CubeAI, voici les résultats :
+
+![Analyse modèle compressé](./img/compressed_model.png)
+
+Après compression, la taille du modèle est siffisamment réduite pour pouvoir être stocké dans la Flash, le rendant ainsi embarquable.
+
+Ensuite, nous avons essayé de modifié directement le fichier python du modèle pour diminuer sa taille (![nouveau fichier train](./train.py)). 
 
 ---
 
