@@ -1,4 +1,4 @@
-# Rapport : Déploiement d’un Réseau de Neurones Profond sur Microcontrôleur
+# Déploiement d’un Réseau de Neurones Profond sur Microcontrôleur
 
 ## 1. Analyse du modèle existant
 
@@ -26,7 +26,7 @@ Comme prévu, la Flash est insuffisante pour contenir notre modèle.
 
 ---
 
-## 4. Conception d’un nouveau modèle (si nécessaire)
+## 4. Les solution pour rendre le modèle embarquable
 
 Une première solution pour rendre le modèle embarquable, est de le compresser. Ceci est directement possible avec STM32CubeAI, voici les résultats :
 
@@ -34,7 +34,7 @@ Une première solution pour rendre le modèle embarquable, est de le compresser.
 
 Après compression, la taille du modèle est siffisamment réduite pour pouvoir être stocké dans la Flash, le rendant ainsi embarquable.
 
-Ensuite, nous avons essayé de modifié directement le fichier python du modèle pour diminuer sa taille (![nouveau fichier train](./train.py)). 
+La deuxième solution consiste à créer un tout nouveau modèle. Pour cela, nous avons modifié directement le fichier python du modèle pour diminuer sa taille (![train.py](./train.py)). 
 
 ---
 
