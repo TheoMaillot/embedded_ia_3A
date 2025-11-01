@@ -52,6 +52,8 @@ Le fichier [serial_evaluation.py](./serial_evaluation.py) gère la communication
 
 Lors de nos premiers tests avec ce code, nous avons remarqué que nous ne recevions rien de la carte (*ValueError: attempt to get argmax of an empty sequence*). Nous avons donc rajouté un *time.sleep(5)* à la ligne 75 dans la fonction *evaluate_model_on_STM32*, après avoir envoyé les inputs, afin de laissé du temps de calcul à la carte. Ceci s'explique par la taille de la RAM du STM32L4R9, qui n'est pas assez importante pour réaliser les calculs aussi vite que sur notre ordinateur.
 
+---
+
 ### b. Partie embarquée : réception des data et entrainement 
 
 ---
