@@ -38,11 +38,21 @@ Après compression, la taille du modèle est siffisamment réduite pour pouvoir 
 
 ### b. Création d'un modèle plus léger
 
-La deuxième solution consiste à créer un tout nouveau modèle. Pour cela, nous avons modifié directement le fichier python du modèle pour diminuer sa taille (![train.py](./train.py)). 
+La deuxième solution consiste à créer un tout nouveau modèle. Pour cela, nous avons modifié directement le fichier [train.py](./train.py) du modèle pour diminuer sa taille. 
 
 ---
 
 ## 5. Intégration dans un projet embarqué
+
+La dernière étape du développement du projet consistait à intégrer notre modèle dans la carte. Pour cela, nous avons erécupéré notre nouveau fichier h5 et l'avons implémenté via CubeIde. Il faut ensuite entraîner le modèle directement sur la carte.
+
+### a. Partie Python : envoi des datas vers la carte et évaluation
+
+Le fichier [serial_evaluation.py](./serial_evaluation.py) gère la communication série entre notre PC et la carte : il synchronise l'UART, envoie des entrées (X_test) sous forme de floats 32, lit les sorties retournées par le STM32, compare les prédictions aux labels (Y_test) et calcule l'exactitude sur un nombre d'itérations donné.
+
+Lors de nos premiers tests avec ce code, nous avons remarqué que nous ne recevions rien de la carte (*ValueError: attempt to get argmax of an empty sequence*). Nous avons donc rajouté un *time.sleep(5)* à la ligne 75 dans la fonction *evaluate_model_on_STM32*, après avoir envoyé les inputs, afin de laissé du temps de calcul à la carte. Ceci s'explique par la taille de la RAM du STM32L4R9, qui n'est pas assez importante pour réaliser les calculs aussi vite que sur notre ordinateur.
+
+### b. Partie embarquée : réception des data et entrainement 
 
 ---
 
