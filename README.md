@@ -28,31 +28,28 @@ Comme prévu, la Flash est insuffisante pour contenir notre modèle.
 
 ## 4. Les solution pour rendre le modèle embarquable
 
+### a. Compression du modèle
+
 Une première solution pour rendre le modèle embarquable, est de le compresser. Ceci est directement possible avec STM32CubeAI, voici les résultats :
 
 ![Analyse modèle compressé](./img/compressed_model.png)
 
 Après compression, la taille du modèle est siffisamment réduite pour pouvoir être stocké dans la Flash, le rendant ainsi embarquable.
 
+### b. Création d'un modèle plus léger
+
 La deuxième solution consiste à créer un tout nouveau modèle. Pour cela, nous avons modifié directement le fichier python du modèle pour diminuer sa taille (![train.py](./train.py)). 
 
 ---
 
-## 5. Conversion du modèle pour la cible embarquée
+## 5. Intégration dans un projet embarqué
 
 ---
 
-## 6. Sélection d’un nouveau microcontrôleur (si nécessaire)
+## 6. Évaluation des performances sur cible
 
 ---
 
-## 7. Intégration dans un projet embarqué
-
----
-
-## 8. Évaluation des performances sur cible
----
-
-## 9. Conclusion
+## 7. Conclusion
 
 ---
