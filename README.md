@@ -92,6 +92,23 @@ L'ajout de STM32CubeAI rajoute de nombreux fichiers, notamment le fichier [app_x
 
 ## 6. Évaluation des performances sur cible
 
+Après avoir généré un nouveau fichier .h5 de taille réduite, nous l'avons implémenté dans la cible via CubeIde.
+L'exécution de notre programme *serial_evaluation.py* nous donne les résultats suivant :
+
+![résultats entrainement](./img/resultat_final.png)
+
+### Performance
+- **Accuracy**: 87% sur 100 itérations
+- **Temps d'inférence**: ~6 secondes par image (10 minutes pour 100 inférences)
+
+### Analyse des résultats
+- L'exactitude obtenue sur la cible est comparable aux performances du modèle sur PC (83%)
+- Le temps d'inférence relativement long s'explique par les contraintes matérielles :
+  - Vitesse de calcul limitée du microcontrôleur à cause de la RAM
+  - Temps de communication UART entre PC et carte
+
+Ces résultats démontrent que notre modèle optimisé fonctionne efficacement sur la cible.
+
 ---
 
 ## 7. Attaques avec Projected Gradient Descent (PGD)
