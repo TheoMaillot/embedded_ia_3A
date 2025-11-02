@@ -1,6 +1,6 @@
 # Déploiement d’un Réseau de Neurones Profond sur Microcontrôleur
 
-Le but de ce projet est le déploiement d’un réseau de neurones profonds préentraîné sur le dataset CIFAR-10 pour une application de classification d’images. L’objectif principal est d’adapter ce modèle afin de le rendre embarquable sur un microcontrôleur en respectant les contraintes inhérentes aux systèmes embarqués : capacité de stockage, puissance de calcul réduite etc..
+Le but de ce projet est le déploiement d’un réseau de neurones profonds préentraîné sur le dataset CIFAR-10 pour une application de classification d’images. L’objectif principal est d’adapter ce modèle afin de le rendre embarquable sur un microcontrôleur en respectant les contraintes inhérentes aux systèmes embarqués : capacité de stockage, puissance de calcul réduite etc.
 
 ---
 
