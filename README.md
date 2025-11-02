@@ -30,7 +30,7 @@ Comme prévu, la Flash est insuffisante pour contenir notre modèle.
 
 ---
 
-## 4. Les solution pour rendre le modèle embarquable
+## 4. Les solutions pour rendre le modèle embarquable
 
 ### a. Compression du modèle
 
@@ -43,6 +43,8 @@ Après compression, la taille du modèle est siffisamment réduite pour pouvoir 
 ### b. Création d'un modèle plus léger
 
 La deuxième solution consiste à créer un tout nouveau modèle. Pour cela, nous avons modifié directement le fichier [train.py](./train.py) du modèle pour diminuer sa taille. 
+
+A COMPLETER !!!!!
 
 ---
 
@@ -68,6 +70,10 @@ L'ajout de STM32CubeAI rajoute de nombreux fichiers, notamment le fichier [app_x
 
 ---
 
-## 7. Conclusion
+## 7. ATTAQUE OU JSP
+
+---
+
+## 8. Conclusion
 
 ---
