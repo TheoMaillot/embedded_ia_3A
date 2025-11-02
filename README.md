@@ -26,7 +26,8 @@ Pour vérifier l'embarquabilité de notre modèle, nous avons créé un projet C
 
 ![Analyse modèle de base](./img/first_analyse.png)
 
-Comme prévu, la Flash est insuffisante pour contenir notre modèle.
+Comme prévu, la Flash est insuffisante pour contenir notre modèle : ce dernier doit occuper 5.14 Mo d'espace pour être implémenter, alors que notre carte n'en compte que 2 Mo. 
+Par contre, sans modification, la RAM necessaire au fonctionnement du programme n'est que de 148 Ko, ce qui est bien inférieur à ce que la carte possède.
 
 ---
 
@@ -34,11 +35,11 @@ Comme prévu, la Flash est insuffisante pour contenir notre modèle.
 
 ### a. Compression du modèle
 
-Une première solution pour rendre le modèle embarquable, est de le compresser. Ceci est directement possible avec STM32CubeAI, voici les résultats :
+Une première solution pour rendre le modèle embarquable, est de le compresser. Ceci est directement possible avec STM32CubeAI, qui propose 3 modes de compression : low, medium et high. Voici les résultats pour le mode *high*:
 
 ![Analyse modèle compressé](./img/compressed_model.png)
 
-Après compression, la taille du modèle est siffisamment réduite pour pouvoir être stocké dans la Flash, le rendant ainsi embarquable.
+Après compression, la taille du modèle est siffisamment réduite pour pouvoir être stocké dans la Flash, le rendant ainsi embarquable. Cette méthode fonctionne aussi pour le mode *medium*, mais pas pour le mode *soft*.
 
 ### b. Création d'un modèle plus léger
 
