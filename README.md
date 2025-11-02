@@ -115,7 +115,7 @@ Ces résultats démontrent que notre modèle optimisé fonctionne efficacement s
 
 ### Description
 
-Cette section présente une étude des attaques utilisant la fonction `projected_gradient_descent()` avec deux normes différentes : **L2** et **L∞**. Ces attaques permettent de tromper les modèles de classification d'images de manière ciblée ou non ciblée.
+Cette section présente une étude des attaques réalisées dans le fichiers [adversarial_example.ipynb](adversarial_example.ipynb) utilisant la fonction `projected_gradient_descent()` avec deux normes différentes : **L2** et **L∞**. Ces attaques permettent de tromper les modèles de classification d'images de manière ciblée ou non ciblée.
 
 ### a. Principe des normes
 
@@ -254,8 +254,20 @@ Les deux normes conservent leurs spécificités respectives, mais cette fois-ci 
 ---
 ### Attaques par Bit Flip
 
-Les **attaques par bit flip** constituent une menace matérielle pour les systèmes embarqués. Contrairement aux attaques adversariales qui modifient les données d'entrée, le bit flip cible directement les poids du modèle stockés en mémoire. En modifiant un ou plusieurs bits dans la représentation binaire des poids (par injection de fautes, perturbations électromagnétiques), un attaquant peut dégrader drastiquement les performances du modèle ou forcer des prédictions erronées spécifiques.
+ Contrairement aux attaques adversariales qui modifient les données d'entrée, le bit flip cible directement les poids du modèle stockés en mémoire. En modifiant un ou plusieurs bits dans la représentation binaire des poids (par injection de fautes, perturbations électromagnétiques), un attaquant peut dégrader drastiquement les performances du modèle ou forcer des prédictions erronées spécifiques.
 
 ## 8. Conclusion
+
+Ce projet de déploiement d'un réseau de neurones sur microcontrôleur STM32L4R9 nous a permis d'explorer plusieurs aspects essentiels :
+
+### Réalisations principales
+- Réduction d'un modèle CNN de 16 Mo à 1.7 Mo tout en maintenant 87% d'accuracy
+- Implémentation réussie sur microcontrôleur avec gestion des contraintes matérielles (RAM et Flash)
+- Mise en place d'une communication série entre PC et carte STM32
+- Étude des vulnérabilités via attaques adversariales
+
+### Défis techniques surmontés
+- Optimisation des couches denses pour respecter les limites de la Flash (2 Mo)
+- Gestion du temps d'inférence (~6s/image)
 
 ---
