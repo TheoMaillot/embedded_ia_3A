@@ -93,7 +93,6 @@ L'ajout de STM32CubeAI rajoute de nombreux fichiers, notamment le fichier [app_x
 
 ## 6. Évaluation des performances sur cible
 
-Après avoir généré un nouveau fichier .h5 de taille réduite, nous l'avons implémenté dans la cible via CubeIde.
 L'exécution de notre programme *serial_evaluation.py* nous donne les résultats suivant :
 
 ![résultats entrainement](./img/resultat_final.png)
