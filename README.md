@@ -135,7 +135,7 @@ pgd_step_budget = 0.01          # step size
 
 ##### Configuration inefficace (pas trop grand)
 
-Si le pas (step) a la même valeur que l'epsilon, les chances de succès chutent drastiquement. Le gradient "rebondit" aux frontières de la contrainte L∞ (un hypercube) sans converger efficacement.
+Si le pas (step) a la même valeur que l'epsilon, les chances de succès chutent drastiquement. Le gradient "rebondit" aux frontières de la contrainte L∞ sans converger efficacement.
 
 ![Image_2_attack_normal_adv_001](./img/Image_2_attack_normal_adv_001.png)
 
