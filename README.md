@@ -66,9 +66,10 @@ Après compression, la taille du modèle est siffisamment réduite pour pouvoir 
 
 ### b. Création d'un modèle plus léger
 
-La deuxième solution consiste à créer un tout nouveau modèle. Pour cela, nous avons modifié directement le fichier [train.py](./train.py) du modèle pour diminuer sa taille. 
+La deuxième solution consiste à créer un tout nouveau modèle. Pour cela, nous avons modifié directement le fichier [train.py](./train.py) du modèle pour diminuer sa taille.
 
-Ce qu'il faut remarquer et analyser dasn notre cas ce sont les parties qui prennet le plus de mémoire dans notre modèle. Ici dans notre cas les parties qui prennent le plus de place sont les deux avant derniere couches de dense ( la derniere devant rester à 10 obligatoirement ). Afin de réduire drastiquement la taille du modle tous en gardant sont efficacité, réduire les deux couches dense à 256 et 64 au lieu
+
+Ce qu'il faut remarquer et analyser dans notre cas ce sont les parties qui prennent le plus de mémoire dans notre modèle. Ici dans notre cas les parties qui prennent le plus de place sont les deux avant dernières couches de dense (la dernière devant rester à 10 obligatoirement). Afin de réduire drastiquement la taille du modèle tout en gardant son efficacité, réduire les deux couches dense à 256 et 64, a permis à notre modèle de garder la même performance mais avec une taille de 1.7 Mo.
 
 ---
 
