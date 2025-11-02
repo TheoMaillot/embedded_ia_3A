@@ -112,7 +112,7 @@ Ces résultats démontrent que notre modèle optimisé fonctionne efficacement s
 
 ---
 
-## 7. Attaques avec Projected Gradient Descent (PGD)
+## 7. Attaques adversariales avec Projected Gradient Descent (PGD)
 
 ### Description
 
@@ -253,6 +253,9 @@ Les deux normes conservent leurs spécificités respectives, mais cette fois-ci 
 | Ciblée        | L2    | Élevé         | Contrôle de la classe      | Modifications visibles          |
 
 ---
+### Attaques par Bit Flip
+
+Les **attaques par bit flip** constituent une menace matérielle pour les systèmes embarqués. Contrairement aux attaques adversariales qui modifient les données d'entrée, le bit flip cible directement les poids du modèle stockés en mémoire. En modifiant un ou plusieurs bits dans la représentation binaire des poids (par injection de fautes, perturbations électromagnétiques), un attaquant peut dégrader drastiquement les performances du modèle ou forcer des prédictions erronées spécifiques.
 
 ## 8. Conclusion
 
