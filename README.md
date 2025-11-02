@@ -56,6 +56,8 @@ Lors de nos premiers tests avec ce code, nous avons remarqué que nous ne recevi
 
 ### b. Partie embarquée : réception des data et entrainement 
 
+
+
 ---
 
 ## 6. Évaluation des performances sur cible
