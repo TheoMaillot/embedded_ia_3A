@@ -261,7 +261,7 @@ Les deux normes conservent leurs spécificités respectives, mais cette fois-ci 
 Ce projet de déploiement d'un réseau de neurones sur microcontrôleur STM32L4R9 nous a permis d'explorer plusieurs aspects essentiels :
 
 ### Réalisations principales
-- Réduction d'un modèle CNN de 16 Mo à 1.7 Mo tout en maintenant 87% d'accuracy
+- Réduction d'un modèle CNN de 5 à 1.7 Mo tout en maintenant 87% d'accuracy
 - Implémentation réussie sur microcontrôleur avec gestion des contraintes matérielles (RAM et Flash)
 - Mise en place d'une communication série entre PC et carte STM32
 - Étude des vulnérabilités via attaques adversariales
