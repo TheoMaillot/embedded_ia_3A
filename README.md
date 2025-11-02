@@ -77,7 +77,7 @@ L'ajout de STM32CubeAI rajoute de nombreux fichiers, notamment le fichier [app_x
 
 Cette section présente une étude des attaques utilisant la fonction `projected_gradient_descent()` avec deux normes différentes : **L2** et **L∞**. Ces attaques permettent de tromper les modèles de classification d'images de manière ciblée ou non ciblée.
 
-### Principe des normes
+### a. Principe des normes
 
 La fonction `projected_gradient_descent()` accepte deux normes qui définissent différentes stratégies d'attaque :
 
@@ -89,7 +89,7 @@ La fonction `projected_gradient_descent()` accepte deux normes qui définissent 
 
 ---
 
-### Attaques non ciblées
+### b. Attaques non ciblées
 
 Les attaques non ciblées visent simplement à tromper le modèle sans contrôler la classe prédite en sortie.
 
@@ -165,7 +165,7 @@ pgd_iterations = 75
 
 ---
 
-### Attaques ciblées
+### c. Attaques ciblées
 
 Contrairement aux attaques non ciblées, les attaques ciblées forcent le modèle à prédire une **classe spécifique** (dans notre cas : classe 3).
 
@@ -201,7 +201,7 @@ Les deux normes conservent leurs spécificités respectives, mais cette fois-ci 
 
 ---
 
-### Tableau récapitulatif
+### d. Bilan des attaques
 
 
 | Type d'attaque | Norme | Epsilon optimal | Avantages                   | Inconvénients                  |
