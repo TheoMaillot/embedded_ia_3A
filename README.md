@@ -56,7 +56,7 @@ Lors de nos premiers tests avec ce code, nous avons remarqué que nous ne recevi
 
 ### b. Partie embarquée : réception des data et entrainement 
 
-L'ajout de STM32CubeAI rajoute de nombreux fichiers, notamment le fichier [app_x-cube-ai.c](./STM32cubeide-project/app_x-cube-ai.c). Il utilise le framework de STM32CubeAI pour exécuter notre embarqué. Nous avons complété le programme pour gèrer la communication UART pour recevoir les images envoyées par le code python, les transmetre au réseau de neurones pour classification et enfin renvoyer les probabilités des 10 classes via UART à notre PC.
+L'ajout de STM32CubeAI rajoute de nombreux fichiers, notamment le fichier [app_x-cube-ai.c](./STM32cubeide-project/app_x-cube-ai.c). Il utilise le framework de STM32CubeAI pour exécuter notre modèle embarqué. Nous avons complété le programme pour gèrer la communication UART pour recevoir les images envoyées par le code python, les transmetre au réseau de neurones pour classification et enfin renvoyer les probabilités des 10 classes via UART à notre PC.
 
 ---
 
