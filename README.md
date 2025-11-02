@@ -71,7 +71,7 @@ L'ajout de STM32CubeAI rajoute de nombreux fichiers, notamment le fichier [app_x
 
 ---
 
-## 7. Attaques adversariales avec Projected Gradient Descent (PGD)
+## 7. Attaques avec Projected Gradient Descent (PGD)
 
 ### Description
 
