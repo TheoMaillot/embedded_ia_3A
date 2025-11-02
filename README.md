@@ -108,19 +108,19 @@ pgd_step_budget = 0.01          # step size
 - Efficacité : 10 images trompées sur 10
 - Discrétion : Quelques rayures légères sur images 32×32, mais attaque peu visible
 
-[Image_1_attack_normal](./img/Image_1_attack_normal.png)
+![Image_1_attack_normal](./img/Image_1_attack_normal.png)
 
 ##### Configuration inefficace (pas trop grand)
 
 Si le pas (step) a la même valeur que l'epsilon, les chances de succès chutent drastiquement. Le gradient "rebondit" aux frontières de la contrainte L∞ (un hypercube) sans converger efficacement.
 
-[Image_2_attack_normal_adv_001](./img/Image_2_attack_normal_adv_001.png)
+![Image_2_attack_normal_adv_001](./img/Image_2_attack_normal_adv_001.png)
 
 ##### Epsilon trop élevé
 
 La norme L∞ nécessite obligatoirement un epsilon faible pour rester discrète. Si tous les pixels dérivent d'une valeur forte, l'image devient un nuage de couleurs chaotiques.
 
-[Image_8_attack_normal_Linf_eps_3_stp_01_ite_40](./img/Image_8_attack_normal_Linf_eps_3_stp_01_ite_40)
+![Image_8_attack_normal_Linf_eps_3_stp_01_ite_40](./img/Image_8_attack_normal_Linf_eps_3_stp_01_ite_40.png)
 
 > **Note :** Epsilon = 3 pour L∞ sur des images normalisées [0,1] est excessivement élevé
 
@@ -149,7 +149,7 @@ pgd_step_budget = 0.05
 
 **Observation :** Les pixels sont modifiés mais pas suffisamment pour être catégorisés comme attaque par un humain. Pourtant, la prédiction est fausse.
 
-**Référence :** `Image_3_attack_normal_L2_eps_120_stp_005`
+![Image_3_attack_normal_L2_eps_120_stp_005](./img/Image_3_attack_normal_L2_eps_120_stp_005.png)
 
 ##### Configuration 2 : Epsilon élevé
 
@@ -161,7 +161,7 @@ pgd_iterations = 75
 
 **Observation :** Beaucoup plus de pixels modifiés en raison de l'epsilon plus grand.
 
-**Référence :** `Image_4_attack_normal_L2_eps_3_stp_005_ite_75`
+![Image_4_attack_normal_L2_eps_3_stp_005_ite_75](./img/Image_4_attack_normal_L2_eps_3_stp_005_ite_75.png)
 
 ---
 
@@ -189,11 +189,11 @@ Pour réaliser une attaque ciblée, deux modifications sont nécessaires :
 
 ##### Norme L∞
 
-**Référence :** `Image_6_attack_cible_Linf_eps_3_stp_01_ite_40`
+![Image_6_attack_cible_Linf_eps_3_stp_01_ite_40](./img/Image_6_attack_cible_Linf_eps_3_stp_01_ite_40.png)
 
 ##### Norme L2
 
-**Référence :** `Image_5_attack_cible_L2_eps_3_stp_005_ite_75`
+![Image_5_attack_cible_L2_eps_3_stp_005_ite_75](./img/Image_5_attack_cible_L2_eps_3_stp_005_ite_75.png)
 
 #### Observation
 
