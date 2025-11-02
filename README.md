@@ -2,6 +2,29 @@
 
 Le but de ce projet est le déploiement d’un réseau de neurones profonds préentraîné sur le dataset CIFAR-10 pour une application de classification d’images. L’objectif principal est d’adapter ce modèle afin de le rendre embarquable sur un microcontrôleur en respectant les contraintes inhérentes aux systèmes embarqués : capacité de stockage, puissance de calcul réduite etc.
 
+### Prérequis
+
+- **Python** à jour
+- **STM32CubeIDE** installé (avec le pack **X-CUBE-AI**)  
+- Une carte **STM32L4R9 Discovery Kit**
+- Les bibliothèques Python nécessaires (numpy, pyserial, etc.)  
+
+### Installation 
+
+```bash
+gh repo clone TheoMaillot/embedded_ia_3A
+```
+
+### Utilisation 
+
+1. Décrompresser dataset.rar pour extraire les deux fichiers .npy
+2. Ouvrir le fichier serial_evaluation.py et renseigner vos propres chemins d'accès aux fichiers .NPY ligne 87 et 88
+3. Brancher la carte et renseigner votre port COM ligne 5
+4. Décompresser IA_Embeded.rar et ouvrir le projet avec Cube Ide
+5. Dans X-CUBE-AI puis dans cifar10, ajouter votre fichier .h5 dans Model, et vos 2 fichier .npy dans Validation inputs et Validation outputs
+6. Appuyer sur Run
+7. Exécuter le fichier serial_evaluation.py
+
 ---
 
 ## 1. Analyse du modèle existant
