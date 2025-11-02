@@ -53,55 +53,6 @@ def build_vgg11(input_shape):
     model.add(layers.BatchNormalization())
     model.add(layers.MaxPooling2D((2,2)))
 
-    model.add(layers.Conv2D(64, (3,3), padding='same', use_bias=True))
-    model.add(layers.Activation('relu'))
-    model.add(layers.BatchNormalization())
-
-    model.add(layers.Conv2D(64, (3,3), padding='same', use_bias=True))
-    model.add(layers.Activation('relu'))
-    model.add(layers.SpatialDropout2D(0.25))
-    model.add(layers.BatchNormalization())
-    model.add(layers.MaxPooling2D((2,2)))
-
-    model.add(layers.Conv2D(128, (3,3), padding='same', use_bias=True))
-    model.add(layers.Activation('relu'))
-    model.add(layers.SpatialDropout2D(0.25))
-    model.add(layers.BatchNormalization())
-    model.add(layers.MaxPooling2D((2,2)))
-
-    model.add(layers.Conv2D(128, (3,3), padding='same', use_bias=True))
-    model.add(layers.Activation('relu'))
-    model.add(layers.SpatialDropout2D(0.25))
-    model.add(layers.BatchNormalization())
-    model.add(layers.MaxPooling2D((2,2)))
-
-
-
-    model.add(layers.Flatten())
-    model.add(layers.Dense(256, activation='relu'))
-    model.add(layers.Dropout(0.3))
-    model.add(layers.Dense(64, activation='relu'))
-    model.add(layers.Dropout(0.3))
-    model.add(layers.Dense(10, activation='softmax'))
-
-    return model
-
-# VGG11 simple (pas de BatchNorm, pas de dropout)
-def build_vgg11(input_shape):
-    model = models.Sequential(name="VGG11_CIFAR10_simple")
-    model.add(layers.Input(shape=input_shape))
-
-
-    model.add(layers.Conv2D(32, (3,3), padding='same', use_bias=True))
-    model.add(layers.Activation('relu'))
-    model.add(layers.BatchNormalization())
-
-    model.add(layers.Conv2D(32, (3,3), padding='same', use_bias=True))
-    model.add(layers.Activation('relu'))
-    model.add(layers.SpatialDropout2D(0.25))
-    model.add(layers.BatchNormalization())
-    model.add(layers.MaxPooling2D((2,2)))
-
     model.add(layers.Conv2D(32, (3,3), padding='same', use_bias=True))
     model.add(layers.Activation('relu'))
     model.add(layers.BatchNormalization())
