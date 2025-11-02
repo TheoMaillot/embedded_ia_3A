@@ -108,19 +108,19 @@ pgd_step_budget = 0.01          # step size
 - Efficacité : 10 images trompées sur 10
 - Discrétion : Quelques rayures légères sur images 32×32, mais attaque peu visible
 
-**Référence :** `Image_1_attack_normal`
+[Image_1_attack_normal](./img/Image_1_attack_normal.png)
 
 ##### Configuration inefficace (pas trop grand)
 
 Si le pas (step) a la même valeur que l'epsilon, les chances de succès chutent drastiquement. Le gradient "rebondit" aux frontières de la contrainte L∞ (un hypercube) sans converger efficacement.
 
-**Référence :** `Image_2_attack_normal_adv_001`
+[Image_2_attack_normal_adv_001](./img/Image_2_attack_normal_adv_001.png)
 
 ##### Epsilon trop élevé
 
 La norme L∞ nécessite obligatoirement un epsilon faible pour rester discrète. Si tous les pixels dérivent d'une valeur forte, l'image devient un nuage de couleurs chaotiques.
 
-**Référence :** `Image_8_attack_normal_Linf_eps_3_stp_01_ite_40`
+[Image_8_attack_normal_Linf_eps_3_stp_01_ite_40](./img/Image_8_attack_normal_Linf_eps_3_stp_01_ite_40)
 
 > **Note :** Epsilon = 3 pour L∞ sur des images normalisées [0,1] est excessivement élevé
 
