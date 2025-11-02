@@ -72,11 +72,9 @@ L'ajout de STM32CubeAI rajoute de nombreux fichiers, notamment le fichier [app_x
 
 ## 7. ATTAQUE OU JSP
 
-### Description
+Dans cette partie, nous allons attaquer notre modèle avec des attaques adversariales utilisant la fonction `projected_gradient_descent()` permettant de tromper les modèles de classification d'images de manière ciblée ou non ciblée.
 
-Ce document présente une étude des attaques adversariales utilisant la fonction `projected_gradient_descent()` avec deux normes différentes : **L2** et **L∞**. Ces attaques permettent de tromper les modèles de classification d'images de manière ciblée ou non ciblée.
-
-### Principe des normes
+### a. Principe des normes
 
 La fonction `projected_gradient_descent()` accepte deux normes qui définissent différentes stratégies d'attaque :
 
