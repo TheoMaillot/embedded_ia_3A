@@ -19,8 +19,8 @@ gh repo clone TheoMaillot/embedded_ia_3A
 
 1. Décrompresser dataset.rar pour extraire les deux fichiers .npy
 2. Ouvrir le fichier serial_evaluation.py et renseigner vos propres chemins d'accès aux fichiers .NPY [ligne 87 et 88](https://github.com/TheoMaillot/embedded_ia_3A/blob/main/serial_evaluation.py#L87-88)
-3. Brancher la carte et renseigner votre port COM ligne 5
-4. Décompresser IA_Embeded.rar et ouvrir le projet avec Cube Ide
+3. Brancher la carte et renseigner votre port COM [ligne 5](https://github.com/TheoMaillot/embedded_ia_3A/blob/main/serial_evaluation.py#L5)
+4. Décompresser [IA_Embeded.rar](./STM32cubeide-project/IA_Embeded.rar) et ouvrir le projet avec Cube Ide
 5. Dans X-CUBE-AI puis dans cifar10, ajouter votre fichier .h5 dans Model, et vos 2 fichier .npy dans Validation inputs et Validation outputs
 6. Appuyer sur Run
 7. Exécuter le fichier serial_evaluation.py
